@@ -1,2 +1,2 @@
-# Bài tập Khai thác Dữ liệu / Thầy Trí`:ưq
+# Bài tập Khai thác Dữ liệu / Thầy Trí
 
