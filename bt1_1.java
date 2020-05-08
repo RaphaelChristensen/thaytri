@@ -1,4 +1,4 @@
-class bt1 {
+class bt1_1 {
 	public static void main(String[] args) {
 		//itemset
 		String[] item = {"", "Blouse", "Jeans", "Shoes", "Shorts", "Skirt", "TShirt"};
@@ -163,9 +163,60 @@ class bt1 {
 			}
 		}
 		//=================================LET'S DO L 3 ==================
-		
-
+		int l3[][][] = new int[7][7][7];
+        for(int row = 0 ; row < 7 ; row++) {
+                for(int col = 0 ; col < 7 ; col++) {
+                	for(int high = 0 ; high < 7 ; high++) {
+                		l3[row][col][high] = 0;
+					}
+                }
+        }
+		//=================================Counting L 3 ==========================
+        for(int row = 1 ; row < 7 ; row++) {
+        	for(int col = 1 ; col < 7 ; col++) {
+        		if(l2[col][row] < 6 || l2 [row][col] < 6) continue;
+        		else if(row <= col) continue;
+        		else {
+                    for(int high = 1 ; high < 7 ; high++) {
+    	                if(high >= row || high >= col) continue;
+                        else if(l2[row][col]<6 || l2[col][row]<6 || l2[row][high]<6 || l2[high][row]<6 || l2[col][high]<6 || l2[high][col]<6) continue;
+                        else {
+                            int row_num = 1;
+                            while(row_num < 21) {
+                               if(tab[row_num][row] == 1 && tab[row_num][col] == 1 && tab[row_num][high] == 1) {
+                                   l3[row][col][high]++;
+                               }
+                               row_num++;
+                            }
+                        }
+                    }
+        		}
+        	}
+        }
+        
+        System.out.println("=====================================Result of L3==================================");
+		for(int row = 1 ; row < 7 ; row++) {
+        	for(int col = 1 ; col < 7 ; col++) {
+        		if(l2[col][row] < 6 || l2 [row][col] < 6) continue;
+        		else if(row <= col) continue;
+        		else {
+                    for(int high = 1 ; high < 7 ; high++) {
+    	                if(high >= row || high >= col) continue;
+                        else if(l2[row][col]<6 || l2[col][row]<6 || l2[row][high]<6 || l2[high][row]<6 || l2[col][high]<6 || l2[high][col]<6) continue;
+                        else {
+                        	System.out.print(item[row] + " & " + item[col] + " & " + item[high] + " : " + l3[row][col][high]);
+    						if(l3[row][col][high] < 6) {
+    			                    System.out.println(" xx loai");
+    			            } else {
+    			                    System.out.println(" $$ NHAN $$");
+    			            }
+                        }
+                    }
+        		}
+        	}
+        }
 	}
 }
+
 
 
