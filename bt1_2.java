@@ -1,28 +1,28 @@
 import java.awt.SystemTray;
 
-//Giải bài tập Apriori 1 - Môn Khai thác Dữ liệu 
+//Giải bài tập Apriori 2 - môn Khai thác Dữ liệu
 
-class bt1_1 {
+class bt1_2 {
 	public static void main(String[] args) {
 		//itemsetset
-		String[] itemset = {"", "Blouse", "Jeans", "Shoes", "Shorts", "Skirt", "TShirt"};
+		String[] itemset = {"", "M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9", "M10", "M11"};
 		
 		int dem = 0; //Kiểm tra tổng số tập phổ biến nhằm tiếp tục hoặc kết thúc bài toán
 		// ===================================== I N S E R T == V A L U E ======
             //$$$$$$$$$$$$$$$ Nhập tổng số lượng các hạng mục $$$$$$$$$$$
-            int item = 6;
+            int item = 11;
             int item_tab = item + 1; //Need null value so as to sync easily in arrays
 
             //$$$$$$$$$$$$$$$ Nhập lượng giao dịch $$$$$$$$$$$$$
-            int tid = 20;
+            int tid = 35;
             int tid_tab = tid + 1; ////Need null value so as to sync easily in arrays
 
             //$$$$$$$$$$$$$$$ Nhập độ phổ biến (đơn vị %) $$$$$$$$$$$$$
-            int minsupp = 30;
+            int minsupp = 20;
             int minsupp_count = minsupp*tid/100;
             System.out.println("===============||| Số đếm độ tin cậy = " + minsupp_count + "||| ===============");
             //$$$$$$$$$$$$$$$ Nhập độ tin cậy (đơn vị %) $$$$$$$$$$$$$
-            int minconf = 30;
+            int minconf = 50;
             float min_conf_pt = minconf/100;
 
             // ===================================== I N S E R T == V A L U E ======
@@ -44,77 +44,210 @@ class bt1_1 {
 		}
 		//insert value
 
+		tab[1][3] = 1;
 		tab[1][1] = 1;
+		tab[1][4] = 1;
+		tab[1][2] = 1;
+		tab[1][6] = 1;
+		tab[1][11] = 1;
 
-		tab[2][3] = 1;
 		tab[2][5] = 1;
+		tab[2][3] = 1;
+		tab[2][1] = 1;
+		tab[2][4] = 1;
 		tab[2][6] = 1;
+		tab[2][7] = 1;
+		tab[2][8] = 1;
+		tab[2][9] = 1;
 
-		tab[3][2] = 1;
 		tab[3][6] = 1;
+		tab[3][8] = 1;
+		tab[3][1] = 1;
+		tab[3][5] = 1;
+		tab[3][10] = 1;
 
 		tab[4][2] = 1;
-		tab[4][3] = 1;
-		tab[4][6] = 1;
 
-		tab[5][2] = 1;
+		tab[5][3] = 1;
 		tab[5][4] = 1;
 
+		tab[6][1] = 1;
+		tab[6][2] = 1;
 		tab[6][3] = 1;
+		tab[6][5] = 1;
 		tab[6][6] = 1;
+		tab[6][7] = 1;
+		tab[6][8] = 1;
+		tab[6][9] = 1;
 
 		tab[7][2] = 1;
-		tab[7][5] = 1;
+		tab[7][4] = 1;
+		tab[7][6] = 1;
+		tab[7][7] = 1;
+		tab[7][8] = 1;
 
 		tab[8][2] = 1;
+		tab[8][1] = 1;
 		tab[8][3] = 1;
 		tab[8][4] = 1;
+		tab[8][5] = 1;
 		tab[8][6] = 1;
+		tab[8][7] = 1;
+		tab[8][8] = 1;
 
+		tab[9][6] = 1;
+		tab[9][8] = 1;
+		tab[9][5] = 1;
+		tab[9][1] = 1;
+		tab[9][4] = 1;
+		tab[9][3] = 1;
+		tab[9][7] = 1;
 		tab[9][2] = 1;
 
-		tab[10][2] = 1;
+		tab[10][5] = 1;
+		tab[10][1] = 1;
+		tab[10][4] = 1;
 		tab[10][3] = 1;
-		tab[10][6] = 1;
+		tab[10][7] = 1;
+		tab[10][10] = 1;
 
 		tab[11][6] = 1;
+		tab[11][1] = 1;
+		tab[11][4] = 1;
+		tab[11][2] = 1;
+		tab[11][8] = 1;
 
-		tab[12][1] = 1;
+		tab[12][7] = 1;
+		tab[12][8] = 1;
 		tab[12][2] = 1;
-		tab[12][3] = 1;
-		tab[12][5] = 1;
-		tab[12][6] = 1;
 
-		tab[13][2] = 1;
+		tab[13][1] = 1;
 		tab[13][3] = 1;
-		tab[13][4] = 1;
-		tab[13][6] = 1;
+		tab[13][5] = 1;
+		tab[13][7] = 1;
 
-		tab[14][3] = 1;
-		tab[14][5] = 1;
+		tab[14][2] = 1;
+		tab[14][4] = 1;
 		tab[14][6] = 1;
+		tab[14][8] = 1;
+		tab[14][11] = 1;
 
-		tab[15][2] = 1;
+		tab[15][1] = 1;
+		tab[15][3] = 1;
 		tab[15][6] = 1;
+		tab[15][7] = 1;
 
+		tab[16][4] = 1;
+		tab[16][2] = 1;
+		tab[16][8] = 1;
 		tab[16][5] = 1;
-		tab[16][6] = 1;
+		tab[16][3] = 1;
 
 		tab[17][2] = 1;
-		tab[17][1] = 1;
-		tab[17][5] = 1;
+		tab[17][4] = 1;
+		tab[17][6] = 1;
+		tab[17][7] = 1;
 
+		tab[18][1] = 1;
 		tab[18][2] = 1;
 		tab[18][3] = 1;
-		tab[18][4] = 1;
+		tab[18][5] = 1;
 		tab[18][6] = 1;
+		tab[18][7] = 1;
+		tab[18][8] = 1;
+		tab[18][10] = 1;
+		tab[18][11] = 1;
 
-		tab[19][2] = 1;
+		tab[19][1] = 1;
+		tab[19][4] = 1;
+		tab[19][3] = 1;
+		tab[19][5] = 1;
+		tab[19][6] = 1;
 
+		tab[20][1] = 1;
 		tab[20][2] = 1;
-		tab[20][3] = 1;
-		tab[20][4] = 1;
-		tab[20][6] = 1;
+		tab[20][7] = 1;
+
+		tab[21][8] = 1;
+		tab[21][4] = 1;
+		tab[21][3] = 1;
+		tab[21][1] = 1;
+		tab[21][5] = 1;
+		tab[21][9] = 1;
+
+		tab[22][5] = 1;
+		tab[22][2] = 1;
+
+		tab[23][3] = 1;
+
+		tab[24][8] = 1;
+		tab[24][1] = 1;
+		tab[24][4] = 1;
+
+		tab[25][2] = 1;
+		tab[25][5] = 1;
+		tab[25][6] = 1;
+		tab[25][8] = 1;
+		tab[25][4] = 1;
+		tab[25][1] = 1;
+
+		tab[26][2] = 1;
+		tab[26][5] = 1;
+		tab[26][8] = 1;
+
+		tab[27][2] = 1;
+		tab[27][3] = 1;
+		tab[27][4] = 1;
+		tab[27][8] = 1;
+		tab[27][1] = 1;
+
+		tab[28][6] = 1;
+		tab[28][8] = 1;
+		tab[28][1] = 1;
+		tab[28][5] = 1;
+		tab[28][4] = 1;
+		tab[28][3] = 1;
+		tab[28][7] = 1;
+		tab[28][2] = 1;
+
+		tab[29][1] = 1;
+
+		tab[30][4] = 1;
+		tab[30][5] = 1;
+		tab[30][6] = 1;
+
+		tab[31][2] = 1;
+		tab[31][8] = 1;
+		tab[31][6] = 1;
+		tab[31][1] = 1;
+		tab[31][9] = 1;
+
+		tab[32][4] = 1;
+		tab[32][8] = 1;
+		tab[32][6] = 1;
+		tab[32][2] = 1;
+
+		tab[33][6] = 1;
+		tab[33][1] = 1;
+		tab[33][5] = 1;
+		tab[33][3] = 1;
+		tab[33][4] = 1;
+
+		tab[34][1] = 1;
+		tab[34][2] = 1;
+		tab[34][3] = 1;
+		tab[34][6] = 1;
+		tab[34][7] = 1;
+		tab[34][8] = 1;
+
+		tab[35][4] = 1;
+		tab[35][2] = 1;
+		tab[35][3] = 1;
+		tab[35][6] = 1;
+		tab[35][5] = 1;
+		tab[35][7] = 1;
+		tab[35][8] = 1;
+		tab[35][11] = 1;
 
 		//print to check
 		System.out.println("============||| Table |||================");
